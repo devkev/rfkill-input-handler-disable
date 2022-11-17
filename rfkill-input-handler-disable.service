@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable the Linux kernel's rfkill input handler
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/rfkill-input-handler-disable
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
